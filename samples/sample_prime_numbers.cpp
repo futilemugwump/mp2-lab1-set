@@ -15,8 +15,19 @@
 #include "tbitfield.h"
 
 int main()
-{
-  int n, m, k, count;
+{ 
+	TBitField bf(4),bf2(4);
+	cout << bf << endl;
+	bf.SetBit(2);
+	cout << bf << endl;
+	bf2 = bf;
+	cout << bf2 << endl;
+	//bf.SetBit(3);
+	
+	int a = bf2 != bf;
+	cout << a;
+
+  /*int n, m, k, count;
 
   setlocale(LC_ALL, "Russian");
   cout << "Тестирование программ поддержки битового поля" << endl;
@@ -48,7 +59,7 @@ int main()
         cout << endl;
     }
   cout << endl;
-  cout << "В первых " << n << " числах " << count << " простых" << endl;
+  cout << "В первых " << n << " числах " << count << " простых" << endl; */
 }
 #else
 
